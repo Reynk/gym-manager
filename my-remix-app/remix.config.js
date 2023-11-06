@@ -2,4 +2,5 @@
 module.exports = {
   ignoredRouteFiles: ["**/.*"],
   serverModuleFormat: "cjs",
+  serverDependenciesToBundle: ["@remix-pwa/sw", "@remix-pwa/client"],
 };
