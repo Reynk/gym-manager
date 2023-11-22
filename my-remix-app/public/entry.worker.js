@@ -1926,9 +1926,23 @@ var require_manifest_webmanifest = __commonJS({
   }
 });
 
-// routes-module:routes/TestRoute.tsx?worker
-var require_TestRoute = __commonJS({
-  "routes-module:routes/TestRoute.tsx?worker"(exports, module) {
+// routes-module:routes/appointment-list.tsx?worker
+var require_appointment_list = __commonJS({
+  "routes-module:routes/appointment-list.tsx?worker"(exports, module) {
+    module.exports = {};
+  }
+});
+
+// routes-module:routes/client-list.tsx?worker
+var require_client_list = __commonJS({
+  "routes-module:routes/client-list.tsx?worker"(exports, module) {
+    module.exports = {};
+  }
+});
+
+// routes-module:routes/login.tsx?worker
+var require_login = __commonJS({
+  "routes-module:routes/login.tsx?worker"(exports, module) {
     module.exports = {};
   }
 });
@@ -6307,10 +6321,12 @@ self.addEventListener("message", (event) => {
 // entry-module:@remix-pwa/build/magic
 var route0 = __toESM(require_root());
 var route1 = __toESM(require_manifest_webmanifest());
-var route2 = __toESM(require_TestRoute());
+var route2 = __toESM(require_appointment_list());
+var route3 = __toESM(require_client_list());
+var route4 = __toESM(require_login());
 
 // assets-module:@remix-pwa/dev?assets
-var assets = ["/build/__remix_entry_dev-A4VJU7ZQ.js", "/build/root-ON5RCKBN.js", "/build/manifest-5D084C8D.js", "/build/entry.client-CMZPOD6C.js", "/build/_shared\\runtime-GC7QIU56.js", "/build/_shared\\remix_hmr-FCWCJ2C2.js", "/build/_shared\\react-dom-BEFB7ICU.js", "/build/_shared\\react-3OYUNTOK.js", "/build/_shared\\jsx-runtime-7NXSP56X.js", "/build/_shared\\jsx-dev-runtime-RDH4Y5YT.js", "/build/_shared\\esm-UO4SF2X5.js", "/build/_shared\\client-DFZR44C7.js", "/build/_shared\\chunk-ZWGWGGVF.js", "/build/_shared\\chunk-XU7DNSPJ.js", "/build/_shared\\chunk-UWV35TSL.js", "/build/_shared\\chunk-PNG5AS42.js", "/build/_shared\\chunk-KWLO4PFY.js", "/build/_shared\\chunk-HXICBPF7.js", "/build/_shared\\chunk-GIAAE3CH.js", "/build/_shared\\chunk-C5IEJLKF.js", "/build/_shared\\chunk-BOXFZXVX.js", "/build/_assets\\app-V3UKCKY4.css", "/build/routes\\TestRoute-CGSFLKTY.js", "/build/routes\\manifest[.]webmanifest-J3KYYY3Q.js"];
+var assets = ["/build/__remix_entry_dev-MWT2AYQG.js", "/build/root-MYHWHMNV.js", "/build/manifest-A2DB7868.js", "/build/entry.client-J7TH5OVY.js", "/build/_shared\\runtime-GC7QIU56.js", "/build/_shared\\remix_hmr-7JSDZC2K.js", "/build/_shared\\react-dom-BEFB7ICU.js", "/build/_shared\\react-3OYUNTOK.js", "/build/_shared\\jsx-runtime-7NXSP56X.js", "/build/_shared\\jsx-dev-runtime-RDH4Y5YT.js", "/build/_shared\\esm-FWKWLU6U.js", "/build/_shared\\client-DFZR44C7.js", "/build/_shared\\chunk-ZWGWGGVF.js", "/build/_shared\\chunk-XU7DNSPJ.js", "/build/_shared\\chunk-WSHYQPWS.js", "/build/_shared\\chunk-UWV35TSL.js", "/build/_shared\\chunk-PNG5AS42.js", "/build/_shared\\chunk-GIAAE3CH.js", "/build/_shared\\chunk-BOXFZXVX.js", "/build/_shared\\chunk-63E5HG3C.js", "/build/_shared\\chunk-4OJZJK36.js", "/build/_assets\\app-V3UKCKY4.css", "/build/routes\\manifest[.]webmanifest-J3KYYY3Q.js", "/build/routes\\login-3ODRQ3DR.js", "/build/routes\\client-list-5V7DEHDX.js", "/build/routes\\appointment-list-Z6GGSTXY.js"];
 
 // entry-module:@remix-pwa/build/magic
 var routes = {
@@ -6330,13 +6346,29 @@ var routes = {
     caseSensitive: void 0,
     module: route1
   },
-  "routes/TestRoute": {
-    id: "routes/TestRoute",
+  "routes/appointment-list": {
+    id: "routes/appointment-list",
     parentId: "root",
-    path: "TestRoute",
+    path: "appointment-list",
     index: void 0,
     caseSensitive: void 0,
     module: route2
+  },
+  "routes/client-list": {
+    id: "routes/client-list",
+    parentId: "root",
+    path: "client-list",
+    index: void 0,
+    caseSensitive: void 0,
+    module: route3
+  },
+  "routes/login": {
+    id: "routes/login",
+    parentId: "root",
+    path: "login",
+    index: void 0,
+    caseSensitive: void 0,
+    module: route4
   }
 };
 var entry = { module: entry_worker_exports };

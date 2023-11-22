@@ -2,6 +2,7 @@ import {
     Form,
     Links,
     Meta,
+    Outlet,
     Scripts,
     ScrollRestoration,
 } from "@remix-run/react";
@@ -39,7 +40,7 @@ export default function App() {
             <meta charSet="utf-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <Meta/>
-            <link rel="manifest" href="manifest.webmanifest"/>
+            {/* <link rel="manifest" href="manifest.webmanifest"/> */}
             <Links/>
             <title>Proiect Gym</title>
         </head>
@@ -72,7 +73,7 @@ export default function App() {
                 </ul>
             </nav>
         </div>
-
+        <Outlet/>
         <ScrollRestoration/>
         <Scripts/>
         <LiveReload/>
