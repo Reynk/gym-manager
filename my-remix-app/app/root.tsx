@@ -3,20 +3,24 @@ import {
     Meta,
     Outlet,
     Scripts,
-    ScrollRestoration,
+    ScrollRestoration, useLoaderData,
 } from "@remix-run/react";
 import stylesheet from "./tailwind.css";
-import type {LinksFunction} from "@remix-run/node";
+import type {LinksFunction,LoaderFunction} from "@remix-run/node";
 import {useSWEffect, LiveReload} from "@remix-pwa/sw";
 import {badgingSupported, setBadge} from "@remix-pwa/client";
 import {useEffect} from "react";
 import Navbar from "./components/navbar";
+import {getUser} from "~/utils/auth.server";
 
 export const links: LinksFunction = () => {
     return [{rel: "stylesheet", href: stylesheet}];
 }
-
+export const loader: LoaderFunction = async ({request}) => {
+    return !!(await getUser(request))
+}
 export default function App() {
+    const data = useLoaderData() as boolean;
     useSWEffect();
     useEffect(() => {
         async function checkAndSetBadge() {
@@ -45,7 +49,7 @@ export default function App() {
             <title>Proiect Gym</title>
         </head>
         <body>
-        <Navbar/>
+        <Navbar loggedIn={data}/>
         <Outlet/>
         <ScrollRestoration/>
         <Scripts/>

@@ -1,11 +1,12 @@
 // app/routes/login.tsx
-import {useState} from 'react'
+import {useEffect, useRef, useState} from 'react'
 import {Layout} from '~/components/layout'
 import {FormField} from '~/components/form-field'
-import type {ActionFunction} from "@remix-run/node";
-import {json} from "@remix-run/node";
+import type {ActionFunction, LoaderFunction} from "@remix-run/node";
+import {json, redirect} from "@remix-run/node";
 import {validateName, validatePassword} from "~/utils/validators.server";
-import {login, register} from "~/utils/auth.server";
+import {getUser, login, register} from "~/utils/auth.server";
+import {useActionData} from "@remix-run/react";
 
 export const action: ActionFunction = async ({request}) => {
     const form = await request.formData()
@@ -36,7 +37,15 @@ export const action: ActionFunction = async ({request}) => {
             return json({error: `Invalid Form Data`}, {status: 400});
     }
 }
+export const loader: LoaderFunction = async ({request}) => {
+    // If there's already a user in the session, redirect to the home page
+    return (await getUser(request)) ? redirect('/') : null
+}
 export default function Login() {
+    const actionData = useActionData() as any;
+    const firstLoad = useRef(true)
+    const [errors, setErrors] = useState(actionData?.errors || {})
+    const [formError, setFormError] = useState(actionData?.error || '')
     const [formData, setFormData] = useState({
         username: '',
         password: '',
@@ -47,7 +56,27 @@ export default function Login() {
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>, field: string) => {
         setFormData(form => ({...form, [field]: event.target.value}))
     }
+    useEffect(() => {
+        if (!firstLoad.current) {
+            const newState = {
+                username: '',
+                password: ''
+            }
+            setErrors(newState)
+            setFormError('')
+            setFormData(newState)
+        }
+    }, [action])
 
+    useEffect(() => {
+        if (!firstLoad.current) {
+            setFormError('')
+        }
+    }, [formData])
+
+    useEffect(() => {
+        firstLoad.current = false
+    }, [])
     return (
         <Layout>
             <div className="h-full justify-center items-center flex flex-col gap-y-4">
@@ -61,11 +90,14 @@ export default function Login() {
                 <p className="font-semibold text-slate-300">{action === 'login' ? 'Log In To Give Some Praise!' : 'Sign Up To Get Started!'}</p>
 
                 <form method="POST" className="rounded-2xl bg-gray-200 p-6 w-96">
+                    <div
+                        className="text-xs font-semibold text-center tracking-wide text-red-500 w-full">{formError}</div>
                     <FormField
                         htmlFor="username"
                         label="Username"
                         value={formData.username}
                         onChange={e => handleInputChange(e, 'username')}
+                        error={errors?.username}
                     />
                     <FormField
                         htmlFor="password"
@@ -73,6 +105,7 @@ export default function Login() {
                         label="Password"
                         value={formData.password}
                         onChange={e => handleInputChange(e, 'password')}
+                        error={errors?.password}
                     />
                     <div className="w-full text-center">
                         <button type="submit" name="_action" value={action}
