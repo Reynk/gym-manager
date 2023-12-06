@@ -1,0 +1,57 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String        @id @default(auto()) @map("_id") @db.ObjectId
+  username     String        @unique
+  password     String
+  role         UserRole
+  clients      Client[]
+  appointments Appointment[]
+}
+
+model Client {
+  id           String        @id @default(auto()) @map("_id") @db.ObjectId
+  name         String
+  age          Int
+  height       String
+  weight       String
+  gender       Gender
+  coach        User          @relation(fields: [userId], references: [id])
+  userId       String        @db.ObjectId
+  appointments Appointment[]
+}
+
+model Appointment {
+  id          String      @id @default(auto()) @map("_id") @db.ObjectId
+  date        DateTime
+  time        String
+  workoutType WorkoutType
+  client      Client      @relation(fields: [clientId], references: [id])
+  clientId    String      @db.ObjectId
+  coach       User        @relation(fields: [coachId], references: [id])
+  coachId     String      @db.ObjectId
+}
+
+enum UserRole {
+  COACH
+  CLIENT
+}
+
+enum Gender {
+  M
+  F
+  X
+}
+
+enum WorkoutType {
+  CARDIO
+  MUSCLE
+  ENDURANCE
+}
