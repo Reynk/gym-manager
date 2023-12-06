@@ -1,33 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fac9a3fa-6302-4a49-a272-4563074cd8c4" name="Changes" comment="pwa working">
-      <change afterPath="$PROJECT_DIR$/my-remix-app/app/entry.client.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/app/entry.server.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/app/entry.worker.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/app/routes/TestRoute.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/app/routes/manifest[.]webmanifest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/public/entry.worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/public/icons/android-chrome-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/public/icons/android-chrome-256x256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/public/icons/android-icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/public/icons/android-icon-36x36.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/public/icons/android-icon-48x48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/public/icons/android-icon-72x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/public/icons/android-icon-96x96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/public/icons/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/public/icons/browserconfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/public/icons/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/public/icons/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/public/icons/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/public/icons/mstile-150x150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/public/icons/safari-pinned-tab.svg" afterDir="false" />
+    <list default="true" id="fac9a3fa-6302-4a49-a272-4563074cd8c4" name="Changes" comment="package json">
+      <change afterPath="$PROJECT_DIR$/my-remix-app/app/components/form-field.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-remix-app/app/components/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-remix-app/app/components/navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-remix-app/app/tailwind.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-remix-app/app/utils/auth.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-remix-app/app/utils/prisma.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-remix-app/app/utils/types.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-remix-app/app/utils/user.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-remix-app/app/utils/validators.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-remix-app/tailwind.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-remix-app/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/root.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-remix-app/app/routes/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/routes/login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-remix-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-remix-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-remix-app/remix.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/remix.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-remix-app/public/entry.worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/public/entry.worker.js" afterDir="false" />
     </list>
+    <list id="4e02b019-9689-4b9b-8316-e9dee891b4c6" name="Changes by Robi" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,12 +35,41 @@
       </list>
     </option>
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="false" />
+    <option name="myAllFileTypesSelected" value="true" />
+    <option name="mySelectedFileTypes">
+      <set />
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Remix_PWA_ALL_SERVICES_INSTALL" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MarmotaBlanoasa"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b05bf21b-3a59-4eea-a608-4203ee2fb566" />
+        <option name="url" value="https://github.com/Reynk/gym-manager.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2XJGzx8g0Y0xu5v2m4J3rsEhIAr" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -56,20 +80,32 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Setup-Prisma&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\proiect testare\\gym-manager\\my-remix-app\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;mariadb&quot;,
+      &quot;mongo&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\proiect testare\gym-manager\my-remix-app\app\utils" />
       <recent name="C:\proiect testare\gym-manager\my-remix-app\public" />
       <recent name="C:\proiect testare\gym-manager\my-remix-app\app\resources" />
     </key>
@@ -84,7 +120,26 @@
       <updated>1698340048973</updated>
       <workItem from="1698340051118" duration="1459000" />
       <workItem from="1698345342346" duration="586000" />
+      <workItem from="1701286443510" duration="3453000" />
+      <workItem from="1701864291527" duration="4583000" />
     </task>
+    <task id="LOCAL-00001" summary="prisma setup + mongodb">
+      <option name="closed" value="true" />
+      <created>1701289436170</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701289436170</updated>
+    </task>
+    <task id="LOCAL-00002" summary="package json">
+      <option name="closed" value="true" />
+      <created>1701289503534</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701289503534</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,7 +157,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="pwa working" />
-    <option name="LAST_COMMIT_MESSAGE" value="pwa working" />
+    <MESSAGE value="prisma setup + mongodb" />
+    <MESSAGE value="package json" />
+    <option name="LAST_COMMIT_MESSAGE" value="package json" />
   </component>
 </project>
