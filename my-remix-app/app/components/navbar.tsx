@@ -1,21 +1,26 @@
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-function Navbar() {
+function Navbar({loggedIn}: { loggedIn: boolean }) {
     return (
-        <nav className="flex bg-blue-500 p-3">
+        <nav className="flex bg-yellow-300 p-3 justify-between items-center">
             <ul className="flex gap-4">
                 <li>
-                    <Link to="/client-list">Client List</Link>
+                    <Link to="/client-list" className="text-blue-600 font-semibold">Client List</Link>
                 </li>
                 <li>
-                    <Link to="/appointment-list">Appointment List</Link>
+                    <Link to="/appointment-list" className="text-blue-600 font-semibold">Appointment List</Link>
                 </li>
                 <li>
-                    <Link to="/login">Login</Link>
+                    {
+                        loggedIn ? <form action='/logout' method="post">
+                            <button type="submit" className="text-blue-600 font-semibold">Logout</button>
+                        </form> : ''
+                    }
                 </li>
             </ul>
         </nav>
     );
 }
+
 
 export default Navbar;

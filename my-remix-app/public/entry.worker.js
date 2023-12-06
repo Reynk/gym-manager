@@ -1926,6 +1926,13 @@ var require_manifest_webmanifest = __commonJS({
   }
 });
 
+// routes-module:routes/client-list.$clientID.tsx?worker
+var require_client_list_clientID = __commonJS({
+  "routes-module:routes/client-list.$clientID.tsx?worker"(exports, module) {
+    module.exports = {};
+  }
+});
+
 // routes-module:routes/appointment-list.tsx?worker
 var require_appointment_list = __commonJS({
   "routes-module:routes/appointment-list.tsx?worker"(exports, module) {
@@ -1936,6 +1943,20 @@ var require_appointment_list = __commonJS({
 // routes-module:routes/client-list.tsx?worker
 var require_client_list = __commonJS({
   "routes-module:routes/client-list.tsx?worker"(exports, module) {
+    module.exports = {};
+  }
+});
+
+// routes-module:routes/logout.ts?worker
+var require_logout = __commonJS({
+  "routes-module:routes/logout.ts?worker"(exports, module) {
+    module.exports = {};
+  }
+});
+
+// routes-module:routes/index.ts?worker
+var require_routes = __commonJS({
+  "routes-module:routes/index.ts?worker"(exports, module) {
     module.exports = {};
   }
 });
@@ -6321,12 +6342,15 @@ self.addEventListener("message", (event) => {
 // entry-module:@remix-pwa/build/magic
 var route0 = __toESM(require_root());
 var route1 = __toESM(require_manifest_webmanifest());
-var route2 = __toESM(require_appointment_list());
-var route3 = __toESM(require_client_list());
-var route4 = __toESM(require_login());
+var route2 = __toESM(require_client_list_clientID());
+var route3 = __toESM(require_appointment_list());
+var route4 = __toESM(require_client_list());
+var route5 = __toESM(require_logout());
+var route6 = __toESM(require_routes());
+var route7 = __toESM(require_login());
 
 // assets-module:@remix-pwa/dev?assets
-var assets = ["/build/__remix_entry_dev-7EK2JOLA.js", "/build/root-WU5FZGJT.js", "/build/manifest-F7EA13C0.js", "/build/entry.client-4JPK722L.js", "/build/_assets\\tailwind-AN6CDVOQ.css", "/build/routes\\manifest[.]webmanifest-J3KYYY3Q.js", "/build/routes\\login-UQSCOML6.js", "/build/routes\\client-list-5U4HNYL7.js", "/build/routes\\appointment-list-MZ53MUBJ.js", "/build/_shared\\runtime-GC7QIU56.js", "/build/_shared\\remix_hmr-FCWCJ2C2.js", "/build/_shared\\react-dom-BEFB7ICU.js", "/build/_shared\\react-3OYUNTOK.js", "/build/_shared\\jsx-runtime-7NXSP56X.js", "/build/_shared\\jsx-dev-runtime-RDH4Y5YT.js", "/build/_shared\\esm-U5FJDFVT.js", "/build/_shared\\client-DFZR44C7.js", "/build/_shared\\chunk-ZWGWGGVF.js", "/build/_shared\\chunk-XU7DNSPJ.js", "/build/_shared\\chunk-UWV35TSL.js", "/build/_shared\\chunk-PNG5AS42.js", "/build/_shared\\chunk-GV4QYGRB.js", "/build/_shared\\chunk-GIAAE3CH.js", "/build/_shared\\chunk-C5IEJLKF.js", "/build/_shared\\chunk-BOXFZXVX.js", "/build/_shared\\chunk-BOAQOE3K.js"];
+var assets = ["/build/__remix_entry_dev-4BAFZCRO.js", "/build/root-MZXVAT3V.js", "/build/manifest-3D2E55C2.js", "/build/entry.client-QXLKMGZT.js", "/build/_assets\\tailwind-RIP4TEO2.css", "/build/_shared\\runtime-GC7QIU56.js", "/build/_shared\\remix_hmr-FCWCJ2C2.js", "/build/_shared\\react-dom-BEFB7ICU.js", "/build/_shared\\react-3OYUNTOK.js", "/build/_shared\\jsx-runtime-7NXSP56X.js", "/build/_shared\\jsx-dev-runtime-RDH4Y5YT.js", "/build/_shared\\esm-ODBZYSOE.js", "/build/_shared\\client-DFZR44C7.js", "/build/_shared\\chunk-ZWGWGGVF.js", "/build/_shared\\chunk-XU7DNSPJ.js", "/build/_shared\\chunk-UWV35TSL.js", "/build/_shared\\chunk-PNG5AS42.js", "/build/_shared\\chunk-NKUPSB4I.js", "/build/_shared\\chunk-KPSKFBNB.js", "/build/_shared\\chunk-JSCKBFOW.js", "/build/_shared\\chunk-GIAAE3CH.js", "/build/_shared\\chunk-C5IEJLKF.js", "/build/_shared\\chunk-BOXFZXVX.js", "/build/_shared\\chunk-AJPPG5Z6.js", "/build/routes\\manifest[.]webmanifest-J3KYYY3Q.js", "/build/routes\\logout-MMH6Q26W.js", "/build/routes\\login-DWB7ET6F.js", "/build/routes\\index-VJXIAD6W.js", "/build/routes\\client-list.$clientID-CVBR7WHQ.js", "/build/routes\\client-list-MZE2BOKN.js", "/build/routes\\appointment-list-EGXROTXZ.js"];
 
 // entry-module:@remix-pwa/build/magic
 var routes = {
@@ -6346,13 +6370,21 @@ var routes = {
     caseSensitive: void 0,
     module: route1
   },
+  "routes/client-list.$clientID": {
+    id: "routes/client-list.$clientID",
+    parentId: "routes/client-list",
+    path: ":clientID",
+    index: void 0,
+    caseSensitive: void 0,
+    module: route2
+  },
   "routes/appointment-list": {
     id: "routes/appointment-list",
     parentId: "root",
     path: "appointment-list",
     index: void 0,
     caseSensitive: void 0,
-    module: route2
+    module: route3
   },
   "routes/client-list": {
     id: "routes/client-list",
@@ -6360,7 +6392,23 @@ var routes = {
     path: "client-list",
     index: void 0,
     caseSensitive: void 0,
-    module: route3
+    module: route4
+  },
+  "routes/logout": {
+    id: "routes/logout",
+    parentId: "root",
+    path: "logout",
+    index: void 0,
+    caseSensitive: void 0,
+    module: route5
+  },
+  "routes/index": {
+    id: "routes/index",
+    parentId: "root",
+    path: "index",
+    index: void 0,
+    caseSensitive: void 0,
+    module: route6
   },
   "routes/login": {
     id: "routes/login",
@@ -6368,7 +6416,7 @@ var routes = {
     path: "login",
     index: void 0,
     caseSensitive: void 0,
-    module: route4
+    module: route7
   }
 };
 var entry = { module: entry_worker_exports };
