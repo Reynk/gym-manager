@@ -2,6 +2,7 @@ export const en = {
   pageTitle: "Gym App",
   welcomeMessage: "Welcome to Our Gym!",
   welcomeMessage2: "Access app",
+  signUpMessage: "Sign Up to Our Gym!",
   signIn: "Sign In",
   signUp: "Sign Up",
   logout: "Logout",
@@ -27,5 +28,6 @@ export const en = {
   scheduleAppointment: "Schedule Appointment",
   datePicker: "Date Picker",
   hourPicker: "Hour Picker",
-  workoutTypePicker: "Workout Type Picker"
+  workoutTypePicker: "Workout Type Picker",
 }
+export type TranslationsKeys = keyof typeof en;

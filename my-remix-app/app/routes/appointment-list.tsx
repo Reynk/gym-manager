@@ -1,37 +1,34 @@
 import type {LoaderFunction} from "@remix-run/node";
 import {requireUserId} from "~/utils/auth.server";
 import {prisma} from "~/utils/prisma.server";
+import {useLoaderData} from "@remix-run/react";
+import {useTranslation} from "~/utils/useTranslation";
 
-const appointment = await prisma.appointment.findMany()
-console.log(appointment)
 
 export const loader: LoaderFunction = async ({request}) => {
     await requireUserId(request)
-    return null
+    const data = await prisma.appointment.findMany()
+    return data
 }
-// var arrayForDisplayPurpose = [
-//     {
-//         "date": "1-3-2022",
-//         "time": "19:15git",
-//         "client": "Client1",
-//         "workoutType": "MUSCLE"
-//     },{
-//         "date": "4-2-2023",
-//         "time": "10:30",
-//         "client": "Client2",
-//         "workoutType": "ENDURANCE"
-//     },{
-//         "date": "1-2-2021",
-//         "time": "12:25",
-//         "client": "Client3",
-//         "workoutType": "CARDIO"
-//     }
-// ]
 
 export default function AppointmentList(){
+    const { t } = useTranslation();
+    const data = useLoaderData() as any
+    // var data = [
+    //     {"_id":{"$oid":"657d96940605561607c8a045"},
+    //         "Date":{
+    //         "$date":{
+    //             "$numberLong":"1704412800000"}
+    //         },
+    //         "Client":"Marmota",
+    //         "ClientId":
+    //             {"$oid":"657d91bc48bde091fec52d30"},
+    //         "WorkoutType":"Cariceps"}
+    // ]
+    console.log(data)
     return (
         <div>
-            <h1>Scheduled Appointments</h1>
+            <h1>{t('scheduledAppointments')}</h1>
             <table>
                 <thead>
                     <tr>
@@ -42,15 +39,15 @@ export default function AppointmentList(){
                     </tr>
                 </thead>
                 <tbody>
-                {/*{appointment.map((item)=>{*/}
-                {/*    return(*/}
-                {/*        <tr>*/}
-                {/*            <td>{item.date}</td>*/}
-                {/*            <td>{item.time}</td>*/}
-                {/*            <td>{item.client}</td>*/}
-                {/*            <td>{item.workoutType}</td>*/}
-                {/*        </tr>*/}
-                {/*    )*/}
+                {/*{data.map((item:any)=>{*/}
+                {/*    // return(*/}
+                {/*    //     <tr>*/}
+                {/*    //         <td>{item.Date.$date}</td>*/}
+                {/*    //         <td>{item.time}</td>*/}
+                {/*    //         <td>{item.client.name}</td>*/}
+                {/*    //         <td>{item.workoutType}</td>*/}
+                {/*    //     </tr>*/}
+                {/*    // )*/}
                 {/*})}*/}
                 </tbody>
             </table>
