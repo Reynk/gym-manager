@@ -23,7 +23,6 @@ export default function ClientList() {
                 <h1 className="text-2xl font-bold text-blue-500 mb-4">Client List Route</h1>
                 <div className="flex flex-col w-full max-w-md px-4 py-3 rounded bg-white shadow-lg">
                     <div className="flex flex-row items-center justify-between border-b pb-2">
-                        <h3 className="text-lg font-semibold">ID</h3>
                         <h3 className="text-lg font-semibold">{t('clientName')}</h3>
                     </div>
                     {loaderData.map((client:any) => (

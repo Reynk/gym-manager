@@ -22,7 +22,32 @@ const storage = createCookieSessionStorage({
         httpOnly: true,
     },
 })
+const languageStorage = createCookieSessionStorage({
+    cookie: {
+        name: 'language',
+        secure: process.env.NODE_ENV === 'production',
+        secrets: [sessionSecret],
+        sameSite: 'lax',
+        path: '/',
+        maxAge: 60 * 60 * 24 * 30,
+        httpOnly: true,
+    },
+})
 
+export async function getLanguage(request: Request) {
+    const session = await languageStorage.getSession(request.headers.get('Cookie'))
+    return await session.get('language')
+}
+export async function setLanguage(language: string, redirectTo: string, request: Request) {
+    const session = await languageStorage.getSession(request.headers.get('Cookie'))
+    session.set('language', language)
+    console.log('setLanguage', language, redirectTo)
+    return redirect(redirectTo, {
+        headers: {
+            'Set-Cookie': await languageStorage.commitSession(session),
+        },
+    })
+}
 export async function createUserSession(userId: string, redirectTo: string) {
     const session = await storage.getSession()
     session.set('userId', userId)

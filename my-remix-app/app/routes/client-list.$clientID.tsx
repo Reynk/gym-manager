@@ -16,7 +16,25 @@ export default function IndividualClient() {
     console.log('USER', user)
     return (
         <div className="mt-4 p-4 bg-white shadow rounded">
-            <h2 className="text-xl font-bold">{user.name}</h2>
-            <p>info</p>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div><h2 className="text-xl font-bold">Name</h2></div>
+                <div><h2 className="text-xl font-bold">{user.name}</h2></div>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div>Age</div>
+                <div>{user.age}</div>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div>Weight</div>
+                <div>{user.weight}</div>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div>Height</div>
+                <div>{user.height}</div>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div>Gender</div>
+                <div>{user.gender}</div>
+            </div>
         </div>)
 }
