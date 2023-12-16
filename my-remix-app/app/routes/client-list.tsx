@@ -21,7 +21,7 @@ export default function ClientList() {
     return (
         <div>
             <AddClient/>
-            <div className="flex h-[calc(100vh-48px)] bg-gray-100 gap-1">
+            <div className="flex h-[calc(100vh-48px)] bg-gray-100">
                 <div className="flex flex-col w-1/4 px-4 py-3 bg-white">
                     <div className="flex flex-row items-center justify-between border-b pb-2">
                         <h3 className="text-lg font-semibold">{t('clientName')}</h3>

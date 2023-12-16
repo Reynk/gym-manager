@@ -26,7 +26,7 @@ export default function IndividualClient() {
                 const totalInches = parseInt(unit) * 0.393701;
                 const feet = Math.floor(totalInches / 12);
                 const inches = Math.round(totalInches % 12);
-                return `${feet}'${inches}`;
+                return `${feet}'${inches}"`;
             } else {
                 return Math.floor(parseInt(unit) * constant);
             }
@@ -37,28 +37,27 @@ export default function IndividualClient() {
 
     console.log('USER', user)
     return (
-        <div className='pe-4'>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div className='flex flex-col gap-2 pe-4 bg-white shadow-md rounded px-8 pt-6 pb-8'>
+            <div  className=''>
                 <div><h1 className="text-xl font-bold">{user.name}</h1>
                     <hr/>
                 </div>
-
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <div>Age</div>
+                <div>{t('age')}</div>
                 <div>{user.age}</div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <div>Weight</div>
+                <div>{t('weight')}</div>
                 <div>{convertUnit(user.weight, language, 'weight')} {t('weightType')}</div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <div>Height</div>
+                <div>{t('height')}</div>
 
                 <div>{convertUnit(user.height, language, 'height')}{t('heightType')}</div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <div>Gender</div>
+                <div>{t('gender')}</div>
                 <div>{user.gender}</div>
             </div>
         </div>)

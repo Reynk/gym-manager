@@ -20,32 +20,31 @@ export default function AppointmentList(){
     const data = useLoaderData() as any
 
     return (
-        <div>
-            <h1>{t('scheduledAppointments')}</h1>
-            <table>
+        <div className='flex flex-col gap-2 pe-4 bg-white shadow-md rounded px-8 pt-6 pb-8'>
+            <h1 className="text-center text-2xl font-bold">{t('scheduledAppointments')}</h1>
+            <table className="">
                 <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Hour</th>
-                        <th>Client Name</th>
-                        <th>Workout Type</th>
-                    </tr>
+                <tr>
+                    <th className="px-4 py-2">{t('date')}</th>
+                    <th className="px-4 py-2">{t('hour')}</th>
+                    <th className="px-4 py-2">{t('clientName')}</th>
+                    <th className="px-4 py-2">{t('workoutType')}</th>
+                </tr>
                 </thead>
                 <tbody>
-                {data.map((item:any)=>{
+                {data.map((item: any) => {
                     const date = item.date.split("T")[0]
-                    return(
-                        <tr>
-                            <td>{date}</td>
-                            <td>{item.time}</td>
-                            <td>{item.client.name}</td>
-                            <td>{item.workoutType}</td>
+                    return (
+                        <tr key={item.id}>
+                            <td className="border px-4 py-2">{date}</td>
+                            <td className="border px-4 py-2">{item.time}</td>
+                            <td className="border px-4 py-2">{item.client.name}</td>
+                            <td className="border px-4 py-2">{t(item.workoutType)}</td>
                         </tr>
                     )
                 })}
                 </tbody>
             </table>
-        </div>
-    )
+        </div>)
 
 }

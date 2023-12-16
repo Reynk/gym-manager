@@ -2,8 +2,10 @@ import {useEffect, useState} from "react";
 import {FormField} from "~/components/form-field";
 import {Select} from "~/components/select-field";
 import {useActionData, useFetcher} from "@remix-run/react";
+import {useTranslation} from "~/utils/useTranslation";
 
 export default function AddClient() {
+    const { t } = useTranslation();
     const actionData = useActionData() as any;
     const fetcher = useFetcher()
     const [formData, setFormData] = useState({
@@ -34,7 +36,7 @@ export default function AddClient() {
                 <div>
                     <FormField
                         htmlFor="name"
-                        label="Name"
+                        label={t('name')}
                         value={formData.name}
                         onChange={e => handleInputChange(e, 'name')}
                     />
@@ -42,7 +44,7 @@ export default function AddClient() {
                 <div>
                     <FormField
                         htmlFor="age"
-                        label="Age"
+                        label={t('age')}
                         value={formData.age}
                         onChange={e => handleInputChange(e, 'age')}
                     />
@@ -50,7 +52,7 @@ export default function AddClient() {
                 <div>
                     <FormField
                         htmlFor="height"
-                        label="Height"
+                        label={t('height')}
                         value={formData.height}
                         onChange={e => handleInputChange(e, 'height')}
                     />
@@ -58,7 +60,7 @@ export default function AddClient() {
                 <div>
                     <FormField
                         htmlFor="weight"
-                        label="Weight"
+                        label={t('weight')}
                         value={formData.weight}
                         onChange={e => handleInputChange(e, 'weight')}
                     />
@@ -66,7 +68,7 @@ export default function AddClient() {
                 <div>
                     <Select
                         htmlFor="gender"
-                        label="Gender"
+                        label={t('gender')}
                         value={formData.gender}
                         onChange={e => handleInputChange(e, 'gender')}
                         options={['M', 'F', 'X']}
@@ -76,7 +78,7 @@ export default function AddClient() {
                     <p className='text-gray-200'>test</p>
                     <button type="submit" name="_action"
                             className="rounded-xl bg-yellow-300 p-2 text-blue-600 font-semibold transition duration-300 ease-in-out hover:bg-yellow-400 hover:-translate-y-1">
-                        Add Client
+                        {t('add')}
                     </button>
                 </div>
             </div>
