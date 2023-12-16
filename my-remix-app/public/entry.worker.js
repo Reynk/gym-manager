@@ -1947,6 +1947,13 @@ var require_client_list = __commonJS({
   }
 });
 
+// routes-module:routes/add-client.tsx?worker
+var require_add_client = __commonJS({
+  "routes-module:routes/add-client.tsx?worker"(exports, module) {
+    module.exports = {};
+  }
+});
+
 // routes-module:routes/logout.ts?worker
 var require_logout = __commonJS({
   "routes-module:routes/logout.ts?worker"(exports, module) {
@@ -6345,12 +6352,13 @@ var route1 = __toESM(require_manifest_webmanifest());
 var route2 = __toESM(require_client_list_clientID());
 var route3 = __toESM(require_appointment_list());
 var route4 = __toESM(require_client_list());
-var route5 = __toESM(require_logout());
-var route6 = __toESM(require_routes());
-var route7 = __toESM(require_login());
+var route5 = __toESM(require_add_client());
+var route6 = __toESM(require_logout());
+var route7 = __toESM(require_routes());
+var route8 = __toESM(require_login());
 
 // assets-module:@remix-pwa/dev?assets
-var assets = ["/build/__remix_entry_dev-RRPLL2NA.js", "/build/root-PICH6TYR.js", "/build/manifest-E295D4A4.js", "/build/entry.client-S4NCJMQ6.js", "/build/_assets\\tailwind-BOBOIW2J.css", "/build/_shared\\runtime-GC7QIU56.js", "/build/_shared\\remix_hmr-NQYX3P7F.js", "/build/_shared\\react-dom-BEFB7ICU.js", "/build/_shared\\react-3OYUNTOK.js", "/build/_shared\\jsx-runtime-7NXSP56X.js", "/build/_shared\\jsx-dev-runtime-RDH4Y5YT.js", "/build/_shared\\esm-3QK36T7C.js", "/build/_shared\\client-DFZR44C7.js", "/build/_shared\\chunk-ZWGWGGVF.js", "/build/_shared\\chunk-XU7DNSPJ.js", "/build/_shared\\chunk-WPFPXUGZ.js", "/build/_shared\\chunk-VAALNCDT.js", "/build/_shared\\chunk-UWV35TSL.js", "/build/_shared\\chunk-S4H5CIJM.js", "/build/_shared\\chunk-RXBAPLVP.js", "/build/_shared\\chunk-PNG5AS42.js", "/build/_shared\\chunk-JSCKBFOW.js", "/build/_shared\\chunk-JND76ZYN.js", "/build/_shared\\chunk-GIAAE3CH.js", "/build/_shared\\chunk-G7CHZRZX.js", "/build/_shared\\chunk-BOXFZXVX.js", "/build/_shared\\chunk-53VQPXGH.js", "/build/routes\\manifest[.]webmanifest-J3KYYY3Q.js", "/build/routes\\logout-MMH6Q26W.js", "/build/routes\\login-MMPAI4U6.js", "/build/routes\\index-VJXIAD6W.js", "/build/routes\\client-list.$clientID-SJ2RGEHQ.js", "/build/routes\\client-list-Y35GTI32.js", "/build/routes\\appointment-list-VBHJVSIK.js", "/build/routes\\add-client-RAEC7ACF.js"];
+var assets = ["/build/__remix_entry_dev-RRPLL2NA.js", "/build/root-YMU3WNT4.js", "/build/manifest-2DFD5E42.js", "/build/entry.client-S4NCJMQ6.js", "/build/_shared\\runtime-GC7QIU56.js", "/build/_shared\\remix_hmr-NQYX3P7F.js", "/build/_shared\\react-dom-BEFB7ICU.js", "/build/_shared\\react-3OYUNTOK.js", "/build/_shared\\jsx-runtime-7NXSP56X.js", "/build/_shared\\jsx-dev-runtime-RDH4Y5YT.js", "/build/_shared\\esm-3QK36T7C.js", "/build/_shared\\client-DFZR44C7.js", "/build/_shared\\chunk-ZWGWGGVF.js", "/build/_shared\\chunk-XU7DNSPJ.js", "/build/_shared\\chunk-WPFPXUGZ.js", "/build/_shared\\chunk-VAALNCDT.js", "/build/_shared\\chunk-UWV35TSL.js", "/build/_shared\\chunk-S4H5CIJM.js", "/build/_shared\\chunk-QKLMEHIX.js", "/build/_shared\\chunk-PNG5AS42.js", "/build/_shared\\chunk-JSCKBFOW.js", "/build/_shared\\chunk-JND76ZYN.js", "/build/_shared\\chunk-GIAAE3CH.js", "/build/_shared\\chunk-G7CHZRZX.js", "/build/_shared\\chunk-BOXFZXVX.js", "/build/_shared\\chunk-53VQPXGH.js", "/build/_assets\\tailwind-RBTB5AKV.css", "/build/routes\\manifest[.]webmanifest-J3KYYY3Q.js", "/build/routes\\logout-MMH6Q26W.js", "/build/routes\\login-TWLGX4UW.js", "/build/routes\\index-VJXIAD6W.js", "/build/routes\\client-list.$clientID-Y76ZFIBL.js", "/build/routes\\client-list-6HKBNP6W.js", "/build/routes\\appointment-list-7X3Z6YLT.js", "/build/routes\\add-client-3KBYNGZG.js"];
 
 // entry-module:@remix-pwa/build/magic
 var routes = {
@@ -6394,13 +6402,21 @@ var routes = {
     caseSensitive: void 0,
     module: route4
   },
+  "routes/add-client": {
+    id: "routes/add-client",
+    parentId: "root",
+    path: "add-client",
+    index: void 0,
+    caseSensitive: void 0,
+    module: route5
+  },
   "routes/logout": {
     id: "routes/logout",
     parentId: "root",
     path: "logout",
     index: void 0,
     caseSensitive: void 0,
-    module: route5
+    module: route6
   },
   "routes/index": {
     id: "routes/index",
@@ -6408,7 +6424,7 @@ var routes = {
     path: "index",
     index: void 0,
     caseSensitive: void 0,
-    module: route6
+    module: route7
   },
   "routes/login": {
     id: "routes/login",
@@ -6416,7 +6432,7 @@ var routes = {
     path: "login",
     index: void 0,
     caseSensitive: void 0,
-    module: route7
+    module: route8
   }
 };
 var entry = { module: entry_worker_exports };
