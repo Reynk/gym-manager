@@ -54,4 +54,5 @@ enum WorkoutType {
   CARDIO
   MUSCLE
   ENDURANCE
+  CARICEPS
 }
