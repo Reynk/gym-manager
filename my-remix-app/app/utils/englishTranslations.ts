@@ -27,5 +27,6 @@ export const en = {
   scheduleAppointment: "Schedule Appointment",
   datePicker: "Date Picker",
   hourPicker: "Hour Picker",
-  workoutTypePicker: "Workout Type Picker"
+  workoutTypePicker: "Workout Type Picker",
 }
+export type TranslationsKeys = keyof typeof en;

@@ -1,26 +1,22 @@
-import {Outlet, Link} from "@remix-run/react";
+import {Link, Outlet, useLoaderData} from "@remix-run/react";
 
 import {useState} from 'react';
 import type {LoaderFunction} from "@remix-run/node";
-import {requireUserId} from "~/utils/auth.server";
+import {getUser, requireUserId} from "~/utils/auth.server";
+import {getClientsByUserId} from "~/utils/client.server";
+import {useTranslation} from "~/utils/useTranslation";
 
 export const loader: LoaderFunction = async ({request}) => {
     await requireUserId(request)
-    return null
+    const user = await getUser(request);
+    if (!user) {
+        return null
+    }
+    return getClientsByUserId(user.id);
 }
 export default function ClientList() {
-    const clients = [
-        {id: 1, name: 'Client 1', info: 'Info about Client 1'},
-        {id: 2, name: 'Client 2', info: 'Info about Client 2'},
-        {id: 3, name: 'Client 3', info: 'Info about Client 3'},
-    ]; // Replace this with your actual data
-
-    const [selectedClient, setSelectedClient] = useState(null);
-
-    const handleSelect = (client: { name: string; id: number; info: string }) => {
-        setSelectedClient(client as any);
-    };
-
+    const { t } = useTranslation();
+    const loaderData = useLoaderData() as any;
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
             <div className="flex flex-col">
@@ -30,18 +26,17 @@ export default function ClientList() {
                         <h3 className="text-lg font-semibold">ID</h3>
                         <h3 className="text-lg font-semibold">Name</h3>
                     </div>
-                    {clients.map((client) => (
+                    {loaderData.map((client:any) => (
                         <Link to={`/client-list/${client.id}`}
                               key={client.id}
-                              className={`className="flex flex-row items-center justify-between pt-2" ${selectedClient === client ? 'bg-blue-200' : ''}`}
-                              onClick={() => handleSelect(client)}
+                              className={`className="flex flex-row items-center justify-between pt-2`}
                         >
                             {client.name}
                         </Link>
                     ))}
                 </div>
+                <Outlet />
             </div>
-            <Outlet context={selectedClient}/>
         </div>
     );
 }

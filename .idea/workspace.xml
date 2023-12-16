@@ -5,20 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fac9a3fa-6302-4a49-a272-4563074cd8c4" name="Changes" comment="login/register">
-      <change afterPath="$PROJECT_DIR$/my-remix-app/app/routes/client-list.$clientID.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/app/routes/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/app/routes/logout.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-remix-app/app/components/select-field.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-remix-app/app/routes/add-client.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-remix-app/app/utils/client.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-remix-app/app/utils/useTranslation.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-remix-app/app/components/form-field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/components/form-field.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-remix-app/app/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/components/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-remix-app/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-remix-app/app/routes/appointment-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/routes/appointment-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-remix-app/app/routes/client-list.$clientID.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/routes/client-list.$clientID.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-remix-app/app/routes/client-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/routes/client-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-remix-app/app/routes/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/routes/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-remix-app/app/utils/auth.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/utils/auth.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-remix-app/app/utils/englishTranslations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/utils/englishTranslations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-remix-app/app/utils/types.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/utils/types.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-remix-app/app/utils/user.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/utils/user.server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-remix-app/public/entry.worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/public/entry.worker.js" afterDir="false" />
     </list>
+    <list id="01784e76-d0c0-4cc4-afb2-00e485543993" name="Changes by laucr" comment="" />
     <list id="4e02b019-9689-4b9b-8316-e9dee891b4c6" name="Changes by Robi" comment="">
+      <change beforePath="$PROJECT_DIR$/my-remix-app/app/routes/client-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/routes/client-list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-remix-app/app/routes/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/routes/login.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,12 +50,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "MarmotaBlanoasa"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MarmotaBlanoasa&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -63,19 +65,17 @@
     </option>
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/my-remix-app/app/routes/login.tsx">
+    <file path="$PROJECT_DIR$/my-remix-app/app/routes/client-list.tsx">
       <ranges>
-        <range start1="1" end1="2" start2="1" end2="2" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
-        <range start1="4" end1="6" start2="4" end2="6" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
-        <range start1="7" end1="8" start2="7" end2="9" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
-        <range start1="38" end1="38" start2="39" end2="43" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
-        <range start1="39" end1="39" start2="44" end2="48" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
-        <range start1="49" end1="49" start2="58" end2="69" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
-        <range start1="50" end1="50" start2="70" end2="79" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
-        <range start1="55" end1="56" start2="84" end2="85" changelist="4e02b019-9689-4b9b-8316-e9dee891b4c6" />
-        <range start1="63" end1="63" start2="92" end2="94" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
-        <range start1="68" end1="68" start2="99" end2="100" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
-        <range start1="75" end1="75" start2="107" end2="108" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
+        <range start1="0" end1="1" start2="0" end2="1" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
+        <range start1="4" end1="5" start2="4" end2="7" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
+        <range start1="8" end1="9" start2="10" end2="15" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
+        <range start1="11" end1="23" start2="17" end2="19" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
+        <range start1="30" end1="31" start2="26" end2="27" changelist="4e02b019-9689-4b9b-8316-e9dee891b4c6" />
+        <range start1="32" end1="33" start2="28" end2="29" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
+        <range start1="35" end1="37" start2="31" end2="32" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
+        <range start1="42" end1="42" start2="37" end2="38" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
+        <range start1="43" end1="44" start2="39" end2="39" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
       </ranges>
     </file>
   </component>
@@ -99,7 +99,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Rares-branch",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -107,7 +107,7 @@
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\proiect testare\\gym-manager\\my-remix-app\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "H:\\coding\\gym-manager\\my-remix-app\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -125,6 +125,13 @@
       <recent name="C:\proiect testare\gym-manager\my-remix-app\app\resources" />
     </key>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-56bbcd2c060c-JavaScript-WS-233.11799.293" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -137,6 +144,7 @@
       <workItem from="1698345342346" duration="586000" />
       <workItem from="1701286443510" duration="3453000" />
       <workItem from="1701864291527" duration="8460000" />
+      <workItem from="1702726350399" duration="5957000" />
     </task>
     <task id="LOCAL-00001" summary="prisma setup + mongodb">
       <option name="closed" value="true" />
