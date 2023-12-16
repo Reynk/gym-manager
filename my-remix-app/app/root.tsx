@@ -1,43 +1,33 @@
-import {
-    Links,
-    Meta,
-    Outlet,
-    Scripts,
-    ScrollRestoration, useLoaderData,
-} from "@remix-run/react";
+import {Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData,} from "@remix-run/react";
 import stylesheet from "./tailwind.css";
-import type {LinksFunction,LoaderFunction} from "@remix-run/node";
-import {useSWEffect, LiveReload} from "@remix-pwa/sw";
-import {badgingSupported, setBadge} from "@remix-pwa/client";
-import {useEffect} from "react";
+import type {ActionFunction, LinksFunction, LoaderFunction} from "@remix-run/node";
+import { json} from "@remix-run/node";
+
+import {LiveReload, useSWEffect} from "@remix-pwa/sw";
 import Navbar from "./components/navbar";
-import {getUser} from "~/utils/auth.server";
+import {getLanguage, getUser, setLanguage} from "~/utils/auth.server";
 
 export const links: LinksFunction = () => {
     return [{rel: "stylesheet", href: stylesheet}];
 }
 export const loader: LoaderFunction = async ({request}) => {
-    return !!(await getUser(request))
+    const language = await getLanguage(request);
+    return json({loggedIn: !!(await getUser(request)), language: language})
 }
+interface LoaderDataType{
+    loggedIn: boolean;
+    language: string;
+}
+export const action: ActionFunction = async ({ request }) => {
+    const form = Object.fromEntries(await request.formData());
+    if (form.action == 'changeLanguage') {
+        return await setLanguage(String(form.language), String(form.redirectUrl), request);
+    }
+};
 export default function App() {
-    const data = useLoaderData() as boolean;
+    const data = useLoaderData() as LoaderDataType;
+    console.log(data)
     useSWEffect();
-    useEffect(() => {
-        async function checkAndSetBadge() {
-            const isSupported = await badgingSupported();
-            if (isSupported) {
-                const badge = await navigator.setAppBadge(10);
-                await setBadge(10).catch((error) => {
-                    console.error('Failed to set badge:', error);
-                });
-                console.log('Badge set:', badge);
-            } else {
-                console.log('Badging API not supported');
-            }
-        }
-
-        checkAndSetBadge().then(r => console.log(r));
-    }, []);
     return (
         <html lang="en">
         <head>
@@ -49,7 +39,7 @@ export default function App() {
             <title>Proiect Gym</title>
         </head>
         <body>
-        <Navbar loggedIn={data}/>
+        <Navbar loggedIn={data.loggedIn}/>
         <Outlet/>
         <ScrollRestoration/>
         <Scripts/>

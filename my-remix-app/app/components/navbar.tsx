@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom';
 import {useTranslation} from "~/utils/useTranslation";
+import {LanguageSelector} from "~/components/language-selector";
 
 function Navbar({loggedIn}: { loggedIn: boolean }) {
     const { t } = useTranslation();
@@ -21,6 +22,9 @@ function Navbar({loggedIn}: { loggedIn: boolean }) {
                             <button type="submit" className="text-blue-600 font-semibold"></button>
                         </form> : <Link to="/login" className="text-blue-600 font-semibold">Login</Link>
                     }
+                </li>
+                <li>
+                    <LanguageSelector />
                 </li>
             </ul>
         </nav>

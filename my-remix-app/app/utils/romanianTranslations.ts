@@ -14,6 +14,8 @@ export const ro = {
   date: "Data",
   hour: "Ora",
   clientName: "Numele Clientului",
+  weightType: "kg",
+  heightType: "cm",
   workoutType: "Tipul Antrenamentului",
   clientList: "Listă Clienți",
   appointmentsList: "Listă Programari",
