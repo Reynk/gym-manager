@@ -19,7 +19,7 @@ function Navbar({loggedIn}: { loggedIn: boolean }) {
                 <li>
                     {
                         loggedIn ? <form action='/logout' method="post">
-                            <button type="submit" className="text-blue-600 font-semibold"></button>
+                            <button type="submit" className="text-blue-600 font-semibold">Logout</button>
                         </form> : <Link to="/login" className="text-blue-600 font-semibold">Login</Link>
                     }
                 </li>
