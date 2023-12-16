@@ -5,6 +5,7 @@ import {en} from "~/utils/englishTranslations";
 import {ro} from "~/utils/romanianTranslations";
 
 export function useTranslation() {
+    // const language = useRouteData('/')?.language || 'RO'; // fetch cookie
     const language = useRouteData('/')?.language || 'RO';
     const t = React.useCallback(
         (key: Omit<string, TranslationsKeys>) => {
