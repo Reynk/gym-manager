@@ -37,7 +37,7 @@ export default function IndividualClient() {
 
     console.log('USER', user)
     return (
-        <>
+        <div className='pe-4'>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <div><h1 className="text-xl font-bold">{user.name}</h1>
                     <hr/>
@@ -61,5 +61,5 @@ export default function IndividualClient() {
                 <div>Gender</div>
                 <div>{user.gender}</div>
             </div>
-        </>)
+        </div>)
 }
