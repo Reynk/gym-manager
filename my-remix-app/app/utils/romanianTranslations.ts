@@ -2,6 +2,7 @@ export const ro = {
   pageTitle: "Aplicația Gym",
   welcomeMessage: "Bine ați venit la sala noastră de gimnastică!",
   welcomeMessage2: "Acceseaza aplicatia",
+  signUpMessage: "Inregistreaza-te in aplicatia noastra!",
   signIn: "Autentificare",
   signUp: "Înregistrare",
   logout: "Deconectare",

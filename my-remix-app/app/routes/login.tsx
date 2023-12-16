@@ -7,6 +7,7 @@ import {json, redirect} from "@remix-run/node";
 import {validateName, validatePassword} from "~/utils/validators.server";
 import {getUser, login, register} from "~/utils/auth.server";
 import {useActionData} from "@remix-run/react";
+import {useTranslation} from "~/utils/useTranslation";
 
 export const action: ActionFunction = async ({request}) => {
     const form = await request.formData()
@@ -42,6 +43,7 @@ export const loader: LoaderFunction = async ({request}) => {
     return (await getUser(request)) ? redirect('/') : null
 }
 export default function Login() {
+    const { t } = useTranslation();
     const actionData = useActionData() as any;
     const firstLoad = useRef(true)
     const [errors, setErrors] = useState(actionData?.errors || {})
@@ -86,8 +88,8 @@ export default function Login() {
                 >
                     {action === 'login' ? 'Sign Up' : 'Sign In'}
                 </button>
-                <h2 className="text-5xl font-extrabold text-yellow-300">Welcome to Kudos!</h2>
-                <p className="font-semibold text-slate-300">{action === 'login' ? 'Log In To Give Some Praise!' : 'Sign Up To Get Started!'}</p>
+                <h2 className="text-5xl font-extrabold text-yellow-300">{t('clientList')}</h2>
+                <p className="font-semibold text-slate-300">{action === 'login' ? t('welcomeMessage') : t('signUpMessage')}</p>
 
                 <form method="POST" className="rounded-2xl bg-gray-200 p-6 w-96">
                     <div

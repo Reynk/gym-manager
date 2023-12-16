@@ -2,6 +2,7 @@ export const en = {
   pageTitle: "Gym App",
   welcomeMessage: "Welcome to Our Gym!",
   welcomeMessage2: "Access app",
+  signUpMessage: "Sign Up to Our Gym!",
   signIn: "Sign In",
   signUp: "Sign Up",
   logout: "Logout",
