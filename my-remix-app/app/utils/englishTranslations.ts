@@ -14,6 +14,8 @@ export const en = {
   date: "Date",
   hour: "Hour",
   clientName: "Client Name",
+  weightType: "lbs",
+  heightType: '"',
   workoutType: "Workout Type",
   clientList: "Client List",
   appointmentsList: "Appointments List",

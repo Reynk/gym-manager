@@ -73,7 +73,7 @@ export async function register(user: RegisterForm) {
             {status: 400},
         )
     }
-    return createUserSession(newUser.id, '/');
+    return createUserSession(newUser.id, '/client-list');
 }
 
 export async function login({username, password}: LoginForm) {
@@ -83,7 +83,7 @@ export async function login({username, password}: LoginForm) {
     if (!user || !(await bcrypt.compare(password, user.password)))
         return json({error: `Incorrect login`}, {status: 400})
 
-    return createUserSession(user.id, '/');
+    return createUserSession(user.id, '/client-list');
 }
 export async function requireUserId(request: Request, redirectTo: string = new URL(request.url).pathname) {
     const session = await getUserSession(request)

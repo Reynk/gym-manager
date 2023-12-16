@@ -4,21 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fac9a3fa-6302-4a49-a272-4563074cd8c4" name="Changes" comment="client list + client id">
-      <change afterPath="$PROJECT_DIR$/my-remix-app/app/components/language-selector.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-remix-app/app/utils/useRouteData.tsx" afterDir="false" />
+    <list default="true" id="fac9a3fa-6302-4a49-a272-4563074cd8c4" name="Changes" comment="lang selector">
+      <change afterPath="$PROJECT_DIR$/my-remix-app/app/components/add-client.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-remix-app/app/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/components/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-remix-app/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/root.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-remix-app/app/routes/add-client.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/routes/add-client.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-remix-app/app/routes/client-list.$clientID.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/routes/client-list.$clientID.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-remix-app/app/routes/client-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/routes/client-list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-remix-app/app/utils/auth.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/utils/auth.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-remix-app/app/utils/useTranslation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/utils/useTranslation.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-remix-app/public/entry.worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/public/entry.worker.js" afterDir="false" />
     </list>
     <list id="01784e76-d0c0-4cc4-afb2-00e485543993" name="Changes by laucr" comment="" />
     <list id="4e02b019-9689-4b9b-8316-e9dee891b4c6" name="Changes by Robi" comment="Changes by Robi">
       <change beforePath="$PROJECT_DIR$/my-remix-app/app/routes/client-list.$clientID.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/routes/client-list.$clientID.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-remix-app/app/routes/client-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/routes/client-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-remix-app/app/routes/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/routes/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-remix-app/app/utils/englishTranslations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/utils/englishTranslations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-remix-app/app/utils/romanianTranslations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-remix-app/app/utils/romanianTranslations.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +59,21 @@
         <option name="url" value="https://github.com/Reynk/gym-manager.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/my-remix-app/app/routes/client-list.$clientID.tsx">
+      <ranges>
+        <range start1="6" end1="6" start2="6" end2="8" changelist="4e02b019-9689-4b9b-8316-e9dee891b4c6" />
+        <range start1="13" end1="13" start2="15" end2="16" changelist="4e02b019-9689-4b9b-8316-e9dee891b4c6" />
+        <range start1="14" end1="14" start2="17" end2="19" changelist="4e02b019-9689-4b9b-8316-e9dee891b4c6" />
+        <range start1="15" end1="15" start2="20" end2="37" changelist="4e02b019-9689-4b9b-8316-e9dee891b4c6" />
+        <range start1="17" end1="18" start2="39" end2="40" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
+        <range start1="19" end1="21" start2="41" end2="45" changelist="4e02b019-9689-4b9b-8316-e9dee891b4c6" />
+        <range start1="28" end1="29" start2="52" end2="53" changelist="4e02b019-9689-4b9b-8316-e9dee891b4c6" />
+        <range start1="32" end1="33" start2="56" end2="58" changelist="4e02b019-9689-4b9b-8316-e9dee891b4c6" />
+        <range start1="38" end1="39" start2="63" end2="64" changelist="fac9a3fa-6302-4a49-a272-4563074cd8c4" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -126,7 +140,7 @@
       <workItem from="1698345342346" duration="586000" />
       <workItem from="1701286443510" duration="3453000" />
       <workItem from="1701864291527" duration="8460000" />
-      <workItem from="1702726350399" duration="9386000" />
+      <workItem from="1702726350399" duration="15481000" />
     </task>
     <task id="LOCAL-00001" summary="prisma setup + mongodb">
       <option name="closed" value="true" />
@@ -168,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702732526108</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="lang selector">
+      <option name="closed" value="true" />
+      <created>1702735799131</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702735799131</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +215,7 @@
     <MESSAGE value="login/register" />
     <MESSAGE value="client list + client id" />
     <MESSAGE value="Changes by Robi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by Robi" />
+    <MESSAGE value="lang selector" />
+    <option name="LAST_COMMIT_MESSAGE" value="lang selector" />
   </component>
 </project>
