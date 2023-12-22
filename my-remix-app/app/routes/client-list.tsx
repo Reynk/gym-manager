@@ -26,6 +26,7 @@ export default function ClientList() {
                     <div className="flex flex-row items-center justify-between border-b pb-2">
                         <h3 className="text-lg font-semibold">{t('clientName')}</h3>
                     </div>
+                    <div id="client-list">
                     {loaderData.map((client: any) => (
                         <Link to={`/client-list/${client.id}`}
                               key={client.id}
@@ -34,6 +35,7 @@ export default function ClientList() {
                             <p className='p-1'>{client.name}</p>
                         </Link>
                     ))}
+                    </div>
                 </div>
                 <div className="bg-white p-4 flex-1 w-3/4">
                     <Outlet/>
