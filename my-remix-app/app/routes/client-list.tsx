@@ -32,7 +32,7 @@ export default function ClientList() {
                               key={client.id}
                               className={`flex flex-row items-center justify-between rounded-md ${client.id === clientID && 'bg-blue-200'}`}
                         >
-                            <p className='p-1'>{client.name}</p>
+                            <p className='p-1' id={client.name}>{client.name}</p>
                         </Link>
                     ))}
                     </div>
