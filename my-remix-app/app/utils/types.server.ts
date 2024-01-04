@@ -17,3 +17,11 @@ export type ClientForm = {
     gender: 'M' | 'F' | 'X'
     userId: string
 }
+
+export type AppointmentForm = {
+    date: string
+    time: string
+    workoutType: 'CARDIO' | 'ENDURANCE' | 'MUSCLE'
+    clientId: string,
+    coachId: string
+}
