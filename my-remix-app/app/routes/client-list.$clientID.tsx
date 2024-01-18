@@ -4,6 +4,7 @@ import { redirect} from "@remix-run/node";
 import { requireUserId} from "~/utils/auth.server";
 import {getClient} from "~/utils/client.server";
 import {useLoaderData} from "@remix-run/react";
+import AddAppointment from "~/components/add-appointment";
 import {useTranslation} from "~/utils/useTranslation";
 import {useRouteData} from "~/utils/useRouteData";
 export const loader: LoaderFunction = async ({request, params}) => {
@@ -59,5 +60,6 @@ export default function IndividualClient() {
                 <div>{t('gender')}</div>
                 <div>{user.gender}</div>
             </div>
+            <AddAppointment/>
         </div>)
 }

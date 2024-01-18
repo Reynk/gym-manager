@@ -1,5 +1,5 @@
 import type {LoaderFunction} from "@remix-run/node";
-import {requireUserId} from "~/utils/auth.server";
+import {getUser, requireUserId} from "~/utils/auth.server";
 import {prisma} from "~/utils/prisma.server";
 import {useLoaderData} from "@remix-run/react";
 import {useTranslation} from "~/utils/useTranslation";
@@ -7,18 +7,23 @@ import {useTranslation} from "~/utils/useTranslation";
 
 export const loader: LoaderFunction = async ({request}) => {
     await requireUserId(request)
+    const user = await getUser(request);
+    console.log('user', user);
     const data = await prisma.appointment.findMany({
-        include: {
+        where: {
+            coachId: user?.id
+        },
+        include:{
             client: true
         }
-    })
+    });
     return data;
 }
 
 export default function AppointmentList(){
     const { t } = useTranslation();
     const data = useLoaderData() as any
-
+    console.log(data);
     return (
         <div className='flex flex-col gap-2 pe-4 bg-white shadow-md rounded px-8 pt-6 pb-8'>
             <h1 className="text-center text-2xl font-bold">{t('scheduledAppointments')}</h1>
