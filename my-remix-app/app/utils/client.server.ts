@@ -1,7 +1,7 @@
 // app/utils/client.server.ts
 import {prisma} from "~/utils/prisma.server";
-import type {ClientForm} from './types.server'
-import type { AppointmentForm } from './types.server'
+import type {ClientForm, AppointmentForm } from './types.server'
+
 export const createClient = async (client: ClientForm) => {
     const newClient = await prisma.client.create({
         data: {
