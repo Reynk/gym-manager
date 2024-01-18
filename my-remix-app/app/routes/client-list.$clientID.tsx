@@ -49,12 +49,11 @@ export default function IndividualClient() {
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <div>{t('weight')}</div>
-                <div>{convertUnit(user.weight, language, 'weight')} {t('weightType')}</div>
+                <div id='weight'>{convertUnit(user.weight, language, 'weight')} {t('weightType')}</div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <div>{t('height')}</div>
-
-                <div>{convertUnit(user.height, language, 'height')}{t('heightType')}</div>
+                <div id='height'>{convertUnit(user.height, language, 'height')}{t('heightType')}</div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <div>{t('gender')}</div>
